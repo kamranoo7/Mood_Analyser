@@ -1,0 +1,71 @@
+/* Reset some default styles for better consistency */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #44797d;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.mood-emoji {
+    margin-top: 20px;
+}
+
+.mood-emoji img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #f4f6f8;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .mood-emoji img {
+        max-width: 80%;
+    }
+}
+
+/* Center the content on larger screens */
+@media (min-width: 1200px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

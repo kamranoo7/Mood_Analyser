@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Mood Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvUnnMDhd7TZqPziodJEawEtUhhuLehBkzfA&usqp=CAU");
+            text-align: center;
+            padding: 20px;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+            color: white;
+        }
+#positive{
+    text-align: center;
+    margin-top: 100px;
+}
+        p {
+            font-size: 18px;
+            color:white;
+        }
+#negative{
+    text-align: center;
+    margin-top: 100px;
+}
+        .signup-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c2727;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 3px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .signup-button:hover {
+            background-color: #0056b3;
+        }
+.positive{
+    display: flex;
+    gap: 30px;
+
+}
+.negative{
+    display: flex;
+    gap: 30px;
+}
+.negative>img{
+    border-radius: 15px;
+}
+.positive>img {
+    border-radius: 15px;
+}
+.negative>p{
+    text-align: justify;
+    font-size: 30px;
+    width: 900px;
+    font-weight: 500;
+    margin-left: 100px;
+}
+.positive>p{
+    text-align: justify;
+    font-size: 30px;
+    font-weight: 500;
+}
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .signup-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Mood Analyzer</h1>
+    <p>Get started by signing up:</p>
+    <a href="{{ url_for('signup') }}" class="signup-button">Sign Up</a>
+    <h1 id="positive">Positive Mood</h1>
+    <div class="positive">
+        <img src="https://media.istockphoto.com/id/1426467677/photo/smiling-face-icon-inside-on-circle-grunge-white-paper-cut-with-magnifying-glass-for-good.webp?b=1&s=170667a&w=0&k=20&c=Z1T0pZ6Kj-Ajr7uQhd0iTOENbhuEotX-j_-M8YsAKlw=" alt="">
+ <p>That's great to hear that you're in a positive mood! Positive moods can have many benefits, including improved mental and physical well-being, increased creativity, and better interpersonal relationships. If you have any specific questions or if there's anything you'd like to discuss or do to maintain and enhance your positive mood, feel free to let me know. Whether it's sharing positive quotes, talking about ways to stay happy, or discussing things that bring you joy, I'm here to help!</p>
+    </div>
+    <h1 id="negative">Negative Mood</h1>
+    <div class="negative">
+        <p> Negative moods can be challenging, but it's essential to remember that it's a normal part of life. If you'd like to talk about what's causing your negative mood or if you're looking for ways to improve it, I'm here to help. Sharing your thoughts and concerns can often be a helpful first step in managing negative emotions. Is there anything specific you'd like to discuss or any questions you have about improving your mood?
+
+
+
+
+        </p>
+        <img src="data:image/jpeg;base64,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" alt="">
+    </div>
+    <h1 id="positive">Neutral Mood</h1>
+    <div class="positive">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiIwcue9Hwz67s5N3qt7mW_k5kzZz4VQSNpw&usqp=CAU" alt="">
+        <p>A neutral mood is when you're feeling neither particularly positive nor negative; it's a state of emotional balance. It's quite normal to have moments or periods of neutrality in your emotional life. Sometimes, a neutral mood can be a welcome break from intense emotions, providing a sense of calm and stability.
+
+            If you're in a neutral mood and would like to engage in a conversation, explore a new topic, or have any specific questions or thoughts you'd like to share, feel free to let me know. I'm here to assist with any inquiries or discussions you might have, regardless of your current mood.</p>
+    </div>
+    
+</body>
+</html>

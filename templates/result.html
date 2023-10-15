@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Analyzer - Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+
+   
+
+</head>
+<body>
+    <h1>Mood Analyzer - Result</h1>
+    <p>The mood of the text is: {{ mood }}</p>
+    <div class="mood-emoji">
+        {% if mood == 'Positive Mood' %}
+        <img src="https://gifdb.com/images/high/happy-face-smiling-emoticon-mvjglw5in87ngrqx.gif" alt="Positive Mood">
+        <p>That's great to hear that you're in a positive mood! Positive moods can have many benefits, including improved mental and physical well-being, increased creativity, and better interpersonal relationships. If you have any specific questions or if there's anything you'd like to discuss or do to maintain and enhance your positive mood, feel free to let me know. Whether it's sharing positive quotes, talking about ways to stay happy, or discussing things that bring you joy, I'm here to help!</p>
+        {% elif mood == 'Neutral Mood' %}
+            <img src="https://media.tenor.com/jhBwHrcZrloAAAAM/tolkie-siri.gif" alt="">
+            <p>A neutral mood is when you're feeling neither particularly positive nor negative; it's a state of emotional balance. It's quite normal to have moments or periods of neutrality in your emotional life. Sometimes, a neutral mood can be a welcome break from intense emotions, providing a sense of calm and stability.
+
+                If you're in a neutral mood and would like to engage in a conversation, explore a new topic, or have any specific questions or thoughts you'd like to share, feel free to let me know. I'm here to assist with any inquiries or discussions you might have, regardless of your current mood.</p>
+        {% elif mood == 'Negative Mood' %}
+           <img src="https://media.tenor.com/WB3WrfcXxIsAAAAM/crying-sad-face.gif" alt="">
+           <p> Negative moods can be challenging, but it's essential to remember that it's a normal part of life. If you'd like to talk about what's causing your negative mood or if you're looking for ways to improve it, I'm here to help. Sharing your thoughts and concerns can often be a helpful first step in managing negative emotions. Is there anything specific you'd like to discuss or any questions you have about improving your mood?
+
+
+
+
+           </p>
+        {% endif %}
+    </div>
+    <a href="{{ url_for('index') }}">Back to main page</a>
+</body>
+</html>
